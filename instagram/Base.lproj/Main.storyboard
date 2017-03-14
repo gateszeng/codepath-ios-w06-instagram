@@ -102,7 +102,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="322"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rBw-BA-rvB">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rBw-BA-rvB" customClass="PFImageView">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="291.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CV-ox-s7q">
@@ -124,7 +124,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="captionLabel" destination="6CV-ox-s7q" id="ggc-I3-YJS"/>
-                                            <outlet property="mainView" destination="AWm-cp-gm8" id="jmS-mA-ytT"/>
+                                            <outlet property="mainView" destination="rBw-BA-rvB" id="6AG-Lf-C2y"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

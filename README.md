@@ -2,7 +2,7 @@
 
 **Snapgram** is a photo sharing app using Parse as its backend.
 
-Time spent: **4.0** hours spent in total
+Time spent: **5.0** hours spent in total
 
 ## User Stories
 
@@ -12,7 +12,7 @@ The following **required** functionality is completed:
 - [x] User can log in and log out of his or her account
 - [x] The current signed in user is persisted across app restarts
 - [x] User can take a photo, add a caption, and post it to "Instagram"
-- [ ] User can view the last 20 posts submitted to "Instagram"
+- [x] User can view the last 20 posts submitted to "Instagram"
 
 The following **optional** features are implemented:
 
@@ -36,7 +36,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://imgur.com/M6NkX1D.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://imgur.com/5aZ6afx.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

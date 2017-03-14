@@ -8,14 +8,19 @@
 
 import UIKit
 import Parse
+import ParseUI
 
 class InstagramCell: UITableViewCell {
-    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var mainView: PFImageView!
 
     var postData: PFObject! {
         didSet {
+            self.captionLabel.text = self.postData["caption"] as! String?
             
+            self.mainView.file = self.postData["media"] as? PFFile
+            self.mainView.loadInBackground()
+
         }
     }
     

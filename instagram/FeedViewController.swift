@@ -20,6 +20,9 @@ class FeedViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        //self.tableView.estimatedRowHeight = 400
+        //tableView.rowHeight = UITableViewAutomaticDimension
+        
         getPosts()
 
         // Do any additional setup after loading the view.
@@ -30,13 +33,19 @@ class FeedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
     @IBAction func onLogout(_ sender: Any) {
         print("User logged out")
         PFUser.logOutInBackground { (error: Error?) in
             if let error = error {
                 print(error.localizedDescription)
             }
+            
         }
+        self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func onNewButton(_ sender: Any) {
@@ -54,7 +63,9 @@ class FeedViewController: UIViewController {
         
         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
             if let posts = posts {
+                print(posts)
                 self.posts = posts
+                self.tableView.reloadData()
             } else {
                 print("Posts failed to fetch")
                 print(error?.localizedDescription)
@@ -85,7 +96,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "InstagramCell") as! InstagramCell
         
-        
+        cell.postData = posts?[indexPath.row]
         
         return cell
     }
